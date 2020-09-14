@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "9457f96e-3040-4441-bc42-4aa113dda72e",
+		"name": "TaskApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-09-14 08:15:25.348342+00\",\r\n    \"title\": \"Implement Source/390 data feeds in the production environment.\",\r\n    \"description\": \"For each resource type, do the following tasks: -Configure filtering, if appropriate. -Perform discovery, if required. -Configure the event source. -Verify the event flow.\",\r\n    \"complete\": 0,\r\n    \"status\": \"Open\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo"
+					]
+				},
+				"description": "create"
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"date\": \"12345\",\r\n    \"title\": \"Tes\",\r\n    \"description\": \"Tes Description\",\r\n    \"complete\": 100,\r\n    \"status\": \"Progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo"
+					]
+				},
+				"description": "get"
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"20200814\",\r\n    \"title\": \"Live\",\r\n    \"description\": \"Live Description\",\r\n    \"complete\": 50,\r\n    \"status\": \"Progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/todo/6449dacb-58be-4e79-ab66-aadf420c5e2d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo",
+						"6449dacb-58be-4e79-ab66-aadf420c5e2d"
+					]
+				},
+				"description": "detail"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6449dacb-58be-4e79-ab66-aadf420c5e2d\",\r\n    \"date\": \"2020-09-01 09:15:25.348342+00\",\r\n    \"title\": \"Implement a business system in the production environment.\",\r\n    \"description\": \"For each business system, do the following tasks: -Create the Automated Business Systems configuration file and XML definitions for the business system. -Test the Automated Business Systems file and XML definitions to verify resource inclusion and placement.\",\r\n    \"complete\": 0,\r\n    \"status\": \"Open\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo"
+					]
+				},
+				"description": "update"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"62179528-ae24-465e-bfb2-36d1845023d9\",\r\n        \"date\": \"2020-08-14 09:15:25.348342+00\",\r\n        \"title\": \"Live\",\r\n        \"description\": \"Live Description\",\r\n        \"complete\": 50,\r\n        \"status\": \"Progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/todo/6449dacb-58be-4e79-ab66-aadf420c5e2d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo",
+						"6449dacb-58be-4e79-ab66-aadf420c5e2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mark-done",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/todo/07ff0fcf-4aec-4530-8339-79f4e9fd5e77/mark-done",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo",
+						"07ff0fcf-4aec-4530-8339-79f4e9fd5e77",
+						"mark-done"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "percent-complete",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"complete\": 90\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/todo/07ff0fcf-4aec-4530-8339-79f4e9fd5e77/percent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo",
+						"07ff0fcf-4aec-4530-8339-79f4e9fd5e77",
+						"percent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incoming",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"date\": \"12345\",\r\n    \"title\": \"Tes\",\r\n    \"description\": \"Tes Description\",\r\n    \"complete\": 100,\r\n    \"status\": \"Progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/todo/incoming",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"todo",
+						"incoming"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
